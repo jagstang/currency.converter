@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14460.31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="fX3-5b-fqr">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14460.20"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Currency Table Controller-->
+        <scene sceneID="NH9-mg-3VK">
+            <objects>
+                <tableViewController id="fX3-5b-fqr" customClass="CurrencyTableController" customModule="CurrencyConverter" customModuleProvider="target" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" id="r4F-m6-qLv">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <prototypes>
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="none" indentationWidth="10" reuseIdentifier="currencyCell" id="1TD-kC-f28" customClass="CurrencyCell" customModule="CurrencyConverter" customModuleProvider="target">
+                                <rect key="frame" x="0.0" y="28" width="375" height="44"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="1TD-kC-f28" id="uvw-lN-0yD">
+                                    <rect key="frame" x="0.0" y="0.0" width="375" height="43.5"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                    <subviews>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="CUR" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="h27-8k-8BS">
+                                            <rect key="frame" x="16" y="8.5" width="55" height="26.5"/>
+                                            <constraints>
+                                                <constraint firstAttribute="width" constant="55" id="rnh-rb-26v"/>
+                                            </constraints>
+                                            <fontDescription key="fontDescription" type="system" pointSize="22"/>
+                                            <nil key="textColor"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                        <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="0.0" textAlignment="right" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="b10-M9-4gQ">
+                                            <rect key="frame" x="201" y="7" width="158" height="30"/>
+                                            <constraints>
+                                                <constraint firstAttribute="width" constant="158" id="8NZ-19-cgh"/>
+                                            </constraints>
+                                            <nil key="textColor"/>
+                                            <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                            <textInputTraits key="textInputTraits" keyboardType="decimalPad"/>
+                                        </textField>
+                                    </subviews>
+                                    <constraints>
+                                        <constraint firstItem="h27-8k-8BS" firstAttribute="leading" secondItem="uvw-lN-0yD" secondAttribute="leading" constant="16" id="JWq-54-EQ0"/>
+                                        <constraint firstItem="h27-8k-8BS" firstAttribute="centerY" secondItem="uvw-lN-0yD" secondAttribute="centerY" id="MKp-3l-Htr"/>
+                                        <constraint firstItem="b10-M9-4gQ" firstAttribute="centerY" secondItem="uvw-lN-0yD" secondAttribute="centerY" id="Wue-za-qXw"/>
+                                        <constraint firstAttribute="trailing" secondItem="b10-M9-4gQ" secondAttribute="trailing" constant="16" id="u62-td-euF"/>
+                                    </constraints>
+                                </tableViewCellContentView>
+                                <connections>
+                                    <outlet property="currencyField" destination="b10-M9-4gQ" id="dPF-hS-VqR"/>
+                                    <outlet property="currencyLabel" destination="h27-8k-8BS" id="P5P-Hd-sLO"/>
+                                </connections>
+                            </tableViewCell>
+                        </prototypes>
+                        <connections>
+                            <outlet property="dataSource" destination="fX3-5b-fqr" id="MTJ-xK-4Ou"/>
+                            <outlet property="delegate" destination="fX3-5b-fqr" id="qqW-BF-Uzw"/>
+                        </connections>
+                    </tableView>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="y8l-ld-vLb" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="16.800000000000001" y="145.27736131934034"/>
+        </scene>
+    </scenes>
+</document>
